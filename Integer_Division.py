@@ -1,2 +1,4 @@
-n=int(input())
-print(n//10)
+import math
+a=int(input())
+val=a//10
+print(val)
