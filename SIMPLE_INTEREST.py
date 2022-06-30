@@ -1,3 +1,3 @@
-x,y,z = map(int,input().split())
-a = (x*y*z)/100
-print(int(a))
+p,t,r=map(int,input().split())
+si=p*t*r//100
+print(si)
