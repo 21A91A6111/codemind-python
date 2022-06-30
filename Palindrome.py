@@ -1,14 +1,12 @@
-def check_palindrome(v):
-    if len(v) < 1:
-        return True
-    else:
-        if v[0] == v[-1]:
-            return check_palindrome(v[1:-1])
-        else:
-            return False
-
-var = input()
-if(check_palindrome(var)):
+def rev(a):
+    r=0
+    while (a>0):
+        rem=a%10
+        r=(r*10)+rem
+        a//=10
+    return r
+a=int(input())
+if (a==rev(a)):
     print("True")
 else:
     print("False")
