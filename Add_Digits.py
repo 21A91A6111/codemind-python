@@ -1,13 +1,18 @@
-def addDigits(num):
-    
-    while(num>=10):
-        temp=0
-        while(num>0):
-            temp=temp+num%10
-            num=num//10
-            
-        num=temp
-        
-    return num
-num=int(input())
-print(addDigits(num))
+def add(a):
+    su=0
+    temp=a
+    while True:
+        su=0
+        while temp>0:
+            r=temp%10
+            su+=r
+            temp//=10
+        if su<10:
+            return su
+        else:
+            temp=su
+            su=0
+            continue
+a=int(input())
+res=add(a)
+print(res)
