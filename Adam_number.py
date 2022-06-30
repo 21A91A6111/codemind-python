@@ -1,17 +1,19 @@
-x = int(input())
-n = x**2
-s=0
-while x!=0:
-    v = x%10
-    s = s*10+v
+n=int(input())
+r=n*n
+v=n
+rev=0
+while n!=0 :
+    g=n%10
+    rev=rev*10+g
+    n=n//10
+x=rev*rev
+a=x
+ver=0
+while x!=0 :
+    d=x%10
+    ver=ver*10+d
     x=x//10
-m = s**2
-a=0
-while m!=0:
-    c = m%10
-    a = a*10+c
-    m = m//10
-if n==a:
-    print("True")
-else:
-    print("False")
+if(r==ver) :
+    print(True)
+else :
+    print(False)
