@@ -1,28 +1,31 @@
-def prime(j):
-    i=2
-    v=0
-    while i!=j:
-        if j%i==0:
-            v=1
-        i+=1
-    if v==0:
-        return j
-x = int(input())
-for i in range(x):
-    y = int(input())
-    b=y
-    for j in range(y,1,-1):
-        if prime(j):
-            n=j
-            break
-    for k in range(2,y):
-        if prime(b):
-            m=b
-            break
-        b+=1
-    if (y-n)<(m-y):
-        print(n)
-    elif (y-n)==(m-y):
-        print(n)
+def prime(a):
+    c=0
+    for i in range(1,a+1):
+        if a%i==0:
+            c+=1
+    if c==2:
+        return 1
     else:
-        print(m)
+        return 0
+def near(a):
+    l=f=df=dl=0
+    for i in range(a,0,-1):
+        if prime(i)==1:
+            f=i
+            df=a-i
+            break
+    for i in range(a,10000):
+        if prime(i)==1:
+            l=i
+            dl=i-a
+            break
+    if df==dl:
+        return f
+    elif df>dl:
+        return l
+    elif df<dl:
+        return f
+t=int(input())
+for i in range(t):
+    a=int(input())
+    print(near(a))
