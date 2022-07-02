@@ -1,18 +1,15 @@
-def add(a):
-    su=0
-    temp=a
-    while True:
-        su=0
-        while temp>0:
-            r=temp%10
-            su+=r
-            temp//=10
-        if su<10:
-            return su
-        else:
-            temp=su
-            su=0
-            continue
-a=int(input())
-res=add(a)
-print(res)
+n=int(input())
+s=0
+while n>0:
+    r=n%10
+    s=s+r
+    n=n//10
+    if(n==0 and s<=9):
+        v=1
+        break;
+    elif(n==0 and s>9):
+            n=s
+            s=0
+if(v==1):
+        print(s)
+
